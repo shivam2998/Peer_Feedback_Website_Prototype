@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Peer Feedback System - Assignment 3</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+		
+		<!-- Custom GOOGLE Font CSS -->
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+		<!-- Custom index CSS -->
+		<link href="Custom_css\custom_index_css.css" rel="stylesheet">
+		
+		<!-- FontAwesome of Icons -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  
+		<!-- All colors used REFRENCE SOURCE: https://www.materialpalette.com/colors END SOURCE -->
+  
+	</head>
+	
+	<body>
+	
+	<!-- Navigation Bar REFRENCE SOURCE: Tutorial slides-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+		<a id = "logo" class="navbar-brand" href="index.html">PeerShare</a>
+			<ul class="navbar-nav ml-md-auto">
+				<li>
+					<a href = "start_solution.html" class = "btn btn-info active" style = "margin-top: 5px; margin-right: 17px;">My Solution</a>
+				</li>
+				<li>
+					<a href = "view_others.html" class = "btn btn-info" style = "margin-top: 4px; margin-right: 8px;"><img src = "Custom_css/Images/view-others.png" width = 20px height = 20px style = "margin-bottom: 4px; margin-right: 3px;"> </img> View Others</a>
+				</li>
+				
+				<li>
+					<div class="dropdown" style= "padding-right: 20px; padding-top: 4px">
+						<button class="btn btn-info dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" style= "margin-left: 10px">
+							<i class="fas fa-comment">  Chat</i>
+						</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a style = "border-bottom: solid; border-color: #003E58; " href = "#myModal-groupchat" class="dropdown-item"  data-toggle= "modal" data-target = "#myModal-groupchat"><i class="fas fa-users fa-2x" style = "margin-right: 3px"></i>Group Chat</a>
+							<a style = "border-bottom: solid; border-color: #003E58" class="dropdown-item" href = "#myModal-john" data-toggle= "modal" data-target = "#myModal-john"><i class="fas fa-user-circle fa-2x" style = "margin-right: 3px"></i><img src= "Custom_css/Images/green-dot.png" width= 8px height = 8px /> John</a>
+							<a style = "border-bottom: solid; border-color: #003E58" class="dropdown-item" href = "#myModal-cara" data-toggle= "modal" data-target = "#myModal-cara"><i class="fas fa-user-circle fa-2x" style = "margin-right: 3px"></i><img src= "Custom_css/Images/green-dot.png" width= 8px height = 8px /> Cara</a>
+							<a style = "border-bottom: solid; border-color: #003E58" class="dropdown-item" href = "#myModal-sam" data-toggle= "modal" data-target = "#myModal-sam"><i class="fas fa-user-circle fa-2x"></i> Sam</a>
+							<a style = "border-bottom: solid; border-color: #003E58" class="dropdown-item" href = "#myModal-jason" data-toggle= "modal" data-target = "#myModal-jason"><i class="fas fa-user-circle fa-2x"></i> Jason</a>
+							<a style = "border-bottom: solid; border-color: #003E58" class="dropdown-item" href = "#myModal-laura" data-toggle= "modal" data-target = "#myModal-laura"><i class="fas fa-user-circle fa-2x" style = "margin-right: 3px"></i><img src= "Custom_css/Images/green-dot.png" width= 8px height = 8px />  Laura</a>
+							<a class= "dropdown-item" href = "#myModal-craig" data-toggle= "modal" data-target = "#myModal-craig"><i class="fas fa-user-circle fa-2x"></i> Craig</a>
+						
+					</div>	
+					</div>
+				</li>			
+				<li>
+					<img id = "avatar-photo" src="Custom_css/Images/img_avatar.png" alt="Avatar" width=40px height=40px style = "margin-top:2px; margin-right:10px"/>
+				</li>
+			</ul>
+		</nav>
+		
+	<!-- My message modal REFRENCE SOURCE: https://www.w3schools.com/bootstrap/bootstrap_modal.asp  END SOURCE-->
+	<div id="myModal-groupchat" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Group Chat</h4>
+			</div>
+			<div class="modal-body">
+				<p class="text-primary" style ="font-size: 17px">You: Can you guys help me with sorting breakfast of my solution? </p>
+				<p class="text-danger" style ="font-size: 17px">John: I think you need to add more carbohydrates?</p>
+				<p class="text-sucess" style ="font-size: 17px">Cara: I agree with <span style = "color: Red">John</span>,you can add some fruits to increase it?</p>
+				<p>..</p>
+				<p>..</p>
+				<div class="form-group">
+					<textarea class="form-control" rows="3" placeholder="write your message here"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Send</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+	</div>
+	</div>
+	
+	<!-- Modal for John -->
+	<div id="myModal-john" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Chat</h4>
+			</div>
+			<div class="modal-body">
+				<p class="text-primary" style ="font-size: 17px">You: Hi, can you help me with sorting breakfast of my solution? </p>
+				<p class="text-danger" style ="font-size: 17px">John: I think you need to add more carbohydrates?</p>
+				<p>..</p>
+				<p>..</p>
+				<div class="form-group">
+					<textarea class="form-control" rows="3" placeholder="write your message here"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Send</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+	</div>
+	</div>
+	
+	<!-- Modal for  cara -->
+	<div id="myModal-cara" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Chat</h4>
+			</div>
+			<div class="modal-body">
+				<p class="text-primary" style ="font-size: 17px">You: Hi, can you help me with sorting breakfast of my solution? </p>
+				<p class="text-danger" style ="font-size: 17px">Cara: I think you need to add more carbohydrates?</p>
+				<p>..</p>
+				<p>..</p>
+				<div class="form-group">
+					<textarea class="form-control" rows="3" placeholder="write your message here"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Send</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+	</div>
+	</div>
+	
+	
+	<!-- Modal for Sam -->
+	<div id="myModal-sam" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Chat</h4>
+			</div>
+			<div class="modal-body">
+				<p class="text-primary" style ="font-size: 17px">You: Hi, can you help me with sorting breakfast of my solution? </p>
+				<p class="text-danger" style ="font-size: 17px">Sam: I think you need to add more carbohydrates?</p>
+				<p>..</p>
+				<p>..</p>
+				<div class="form-group">
+					<textarea class="form-control" rows="3" placeholder="write your message here"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Send</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+	</div>
+	</div>
+	
+	<!-- Modal for Jason -->
+	<div id="myModal-jason" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Jason Chat</h4>
+			</div>
+			<div class="modal-body">
+				<p class="text-primary" style ="font-size: 17px">You: Hi, can you help me with sorting breakfast of my solution? </p>
+				<p class="text-danger" style ="font-size: 17px">Jason: I think you need to add more carbohydrates?</p>
+				<p>..</p>
+				<p>..</p>
+				<div class="form-group">
+					<textarea class="form-control" rows="3" placeholder="write your message here"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Send</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+	</div>
+	</div>
+	
+	
+	<!-- Modal for laura -->
+	<div id="myModal-laura" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Chat</h4>
+			</div>
+			<div class="modal-body">
+				<p class="text-primary" style ="font-size: 17px">You: Hi, can you help me with sorting breakfast of my solution? </p>
+				<p class="text-danger" style ="font-size: 17px">Laura: I think you need to add more carbohydrates?</p>
+				<p>..</p>
+				<p>..</p>
+				<div class="form-group">
+					<textarea class="form-control" rows="3" placeholder="write your message here"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Send Message</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+	</div>
+	</div>
+	
+	<!-- Modal for Craig -->
+	<div id="myModal-craig" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Group Chat</h4>
+			</div>
+			<div class="modal-body">
+				<p class="text-primary" style ="font-size: 17px">You: Hi, can you help me with sorting breakfast of my solution? </p>
+				<p class="text-danger" style ="font-size: 17px">Craig: I think you need to add more carbohydrates?</p>
+				<p>..</p>
+				<p>..</p>
+				<div class="form-group">
+					<textarea class="form-control" rows="3" placeholder="write your message here"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Send</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+	</div>
+	</div>
+	
+	
+	<!-- Page Content -->
+	
+	<!-- Writing Solution LEFT SIDE PART -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col" style="background-color:#003E58; padding-bottom: 73px;">
+				<h4 style = "padding-left: 10px ;padding-top: 40px ;padding-bottom: 15px; color: white"> My Solution </h4>
+				<div class="card w-100" style= "padding-bottom: 20px">
+					<div class="card-body">
+						<h5 class="card-title"style = "color: green; font-size: 25px">Custom Diet Plan</h5>
+						<textarea style = "width: 600px; height: 300px;" class="card-text">Breakfast:&#13;&#10;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu arcu sit amet nisl consequat eleifend. Nunc a laoreet lacus. Cras a faucibus odio.&#13;&#10; &#13;&#10;Lunch: &#13;&#10;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lunch:Nullam eu arcu sit amet nisl consequat eleifend. Nunc a laoreet lacus. Cras a faucibus odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu arcu sit amet nisl consequat eleifend. Nunc a laoreet lacus. Cras a faucibus odio. </textarea>
+						<a  class=" notification-button btn btn-success" style = "float:right; color: white">Submit for feedback</a>
+					</div>
+				</div>
+
+			</div>
+	
+	<!-- Feebacks viewer RIGHT SIDE PART -->
+    <div class="col" style = "background-color: #005A7F;" height = auto;>
+		<h4 style = "padding-left: 10px ;padding-top: 40px ;padding-bottom: 15px; color: white"> Feedbacks</h4>
+			<div class="card-columns">
+				<div class="card text-center">
+					<div class="card-body">
+						<h5 class="card-title"style = "color: green; font-size: 25px">John's Feedback</h5>
+						<p class="card-text"><small class="text-muted">Last updated 1 mins ago</small></p>
+						<button href = "#modal-feedback-john" data-toggle= "modal" data-target = "#modal-feedback-john" type = "button" class = "btn btn-success" style = "border: none">View </button>
+					</div>
+				</div>	
+
+				<div class="card text-center">
+					<div class="card-body">
+						<h5 class="card-title"style = "color: green; font-size: 25px">Sam's Feedback</h5>
+						<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					<button href = "#modal-feedback-sam" data-toggle= "modal" data-target = "#modal-feedback-sam" type = "button" class = "btn btn-success" style = "border: none">View </button>
+					</div>
+				</div>
+				
+				<div class="card text-center">
+					<div class="card-body">
+						<h5 class="card-title"style = "color: green; font-size: 25px">Craig's Feedback</h5>
+						<p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
+					<button href = "#modal-feedback-craig" data-toggle= "modal" data-target = "#modal-feedback-craig" type = "button" class = "btn btn-success" style = "border: none">View </button>
+					</div>
+				</div>
+  
+			</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="alert alert-warning alert-dismissible fade show" role="alert" style = "width: 400px; position: absolute; top: 55px; right: 0px;">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+				John posted a feedback on your solution.	
+		</div>
+			
+	<!-- Modal for view feedback for John -->
+	
+	<div id="modal-feedback-john" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+	    <!-- Modal feedback content for John-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">John's Feedbacks</h4>
+			</div>
+			<div class="modal-body">
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">John: </span> Your solution looks pretty balanced except if you add more green vegetables so that he doesn't lack key micro-nutrients. <i class="far fa-thumbs-up fa-1x">   <span style = "color: blue">Like</span></i></p>
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">John: </span> Your solution looks pretty balanced except if you add more green vegetables so that he doesn't lack key micro-nutrients. <i class="far fa-thumbs-up fa-1x">   <span style = "color: blue">Like</span></i></p>
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">You: </span> Thanks, I will try to add that and will update my solution soon.</p>
+				<p>..</p>
+				<p>..</p>
+			<div class="form-group">
+				<textarea class="form-control" rows="3" placeholder="write your comment here"></textarea>
+			</div>
+			</div>
+				
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Post Comment</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+		</div>
+	</div>
+	
+	<!-- Modal for view feedback for Sam -->
+	
+	<div id="modal-feedback-sam" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+	    <!-- Modal feedback content for sam-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Sam's Feedbacks</h4>
+			</div>
+			<div class="modal-body">
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">Sam: </span> Your solution looks pretty balanced except if you add more green vegetables so that he doesn't lack key micro-nutrients. <i class="far fa-thumbs-up fa-1x">   <span style = "color: blue">Like</span></i></p>
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">Sam: </span> Your solution looks pretty balanced except if you add more green vegetables so that he doesn't lack key micro-nutrients. <i class="far fa-thumbs-up fa-1x">   <span style = "color: blue">Like</span></i></p>
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">You: </span> Thanks, I will try to add that and will update my solution soon.</p>
+				<p>..</p>
+				<p>..</p>
+			<div class="form-group">
+				<textarea class="form-control" rows="3" placeholder="write your comment here"></textarea>
+			</div>
+			</div>
+				
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Post Comment</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+		</div>
+	</div>
+	
+	<!-- Modal for view feedback for Craig -->
+	
+	<div id="modal-feedback-craig" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+	    <!-- Modal feedback content for Craig-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Craig's Feedbacks</h4>
+			</div>
+			<div class="modal-body">
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">Craig: </span> Your solution looks pretty balanced except if you add more green vegetables so that he doesn't lack key micro-nutrients. <i class="far fa-thumbs-up fa-1x">   <span style = "color: blue">Like</span></i></p>
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">Craig: </span> Your solution looks pretty balanced except if you add more green vegetables so that he doesn't lack key micro-nutrients. <i class="far fa-thumbs-up fa-1x">   <span style = "color: blue">Like</span></i></p>
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">You: </span> Thanks, I will try to add that and will update my solution soon.</p>
+				<p>..</p>
+				<p>..</p>
+			<div class="form-group">
+				<textarea class="form-control" rows="3" placeholder="write your comment here"></textarea>
+			</div>
+			</div>
+				
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Post Comment</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+		</div>
+	</div>
+	
+	
+	<!-- Modal for view feedback for Jason -->
+	
+	<div id="modal-feedback-jason" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+	    <!-- Modal feedback content for Jason -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Jason's Feedbacks</h4>
+			</div>
+			<div class="modal-body">
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">Jason: </span> Your solution looks pretty balanced except if you add more green vegetables so that he doesn't lack key micro-nutrients. <i class="far fa-thumbs-up fa-1x">   <span style = "color: blue">Like</span></i></p>
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">Jason: </span> Your solution looks pretty balanced except if you add more green vegetables so that he doesn't lack key micro-nutrients. <i class="far fa-thumbs-up fa-1x">   <span style = "color: blue">Like</span></i></p>
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">You: </span> Thanks, I will try to add that and will update my solution soon.</p>
+				<p>..</p>
+				<p>..</p>
+			<div class="form-group">
+				<textarea class="form-control" rows="3" placeholder="write your comment here"></textarea>
+			</div>
+			</div>
+				
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Post Comment</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+		</div>
+	</div>
+	
+	
+		<!-- Modal for view feedback for Laura -->
+	
+	<div id="modal-feedback-laura" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+	    <!-- Modal feedback content for Laura -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title float-left">Laura's Feedbacks</h4>
+			</div>
+			<div class="modal-body">
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">Laura: </span> Your solution looks pretty balanced except if you add more green vegetables so that he doesn't lack key micro-nutrients. <i class="far fa-thumbs-up fa-1x">   <span style = "color: blue">Like</span></i></p>
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">Laura: </span> Your solution looks pretty balanced except if you add more green vegetables so that he doesn't lack key micro-nutrients. <i class="far fa-thumbs-up fa-1x">   <span style = "color: blue">Like</span></i></p>
+				<p style = "font-size: 13.4px"><span style ="color: Palevioletred">You: </span> Thanks, I will try to add that and will update my solution soon.</p>
+				<p>..</p>
+				<p>..</p>
+			<div class="form-group">
+				<textarea class="form-control" rows="3" placeholder="write your comment here"></textarea>
+			</div>
+			</div>
+				
+			<div class="modal-footer">
+				<button type = "button" class = "btn btn-success float-left" data-dismiss= "modal" style = "border: none">Post Comment</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal" style = "border: none">Close</button>
+			</div>
+		</div>
+
+		</div>
+	</div>
+
+	<!-- submit-feedback confirmation SOURCE ----  http://jsfiddle.net/nick_craver/JDfae/  ----- END SOURCE-->
+	
+
+	<div id="message-box">Submission for feedback sucessful!!</div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+	<!-- SOURCE My custom Jquery -->
+	<script src="vendor/jquery/custom_jquery.js"></script>
+
+  </body>
+
+</html>

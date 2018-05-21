@@ -1,0 +1,93 @@
+/* Custom css */
+
+html,body{
+	height: 100%;
+	font-family: 'Work Sans', sans-serif;
+	font-style: Regular;
+}
+
+body{
+	background-color: #005A7F;
+}
+
+p{
+	font-size: 1.3rem;
+	font-weight: 500;
+}
+
+h6{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.8rem;
+	
+}
+
+img{
+	max-width: 100%;
+	
+}
+
+#home-image{
+	background: url("Images/home-page-background.jpg") center center no-repeat;
+	background-size: cover;
+	color: white;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	
+}
+
+#create-diet-caption{
+	font-size: 1.4rem;
+	font-weight:300;
+	max-width: 50rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#create-diet-caption h1{
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+} 
+
+.btn-info{
+	background-color: #007db2;
+	border: none;
+}
+
+#avatar-photo img{
+    border-radius: 50%;
+}
+
+a:hover{
+	color: #003E58; !important;
+}
+
+#logo a:hover{
+	background-color: #003E58; !important;
+}
+
+div.card {
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 1, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+
+#message-box {
+	
+    display: none;
+    width: 100%;
+    background: #f57f17;
+	color: white;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: helvetica neue, arial;
+    position: fixed;
+    bottom: 0;
+    line-height: 50px;
+}

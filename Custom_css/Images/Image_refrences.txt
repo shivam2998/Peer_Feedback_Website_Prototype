@@ -1,0 +1,38 @@
+https://vignette.wikia.nocookie.net/gaia/images/4/41/200px-Green-dot.svg.png/revision/latest?cb=20120429031238&format=original
+https://iconscout.com/icon/avatar-367#_=_ : Avatar icon
+https://www.pinterest.nz/pin/425449496030263838/: Background Image 
+https://www.befunky.com/features/photo-editor/: Image edited using this online software
+https://www.freeiconspng.com/img/17980: For View others Icon
+
+
+Code snippet:
+
+https://www.w3schools.com/bootstrap/bootstrap_modal.asp - For message modal made changes to content for my own fit
+
+https://mdbootstrap.com/components/bootstrap-notification/ - For notification, changes made (top right hand side corner)
+
+
+Colors Used:
+Navbar Button hover: #003E58
+Logo: Hover: #ffa726;
+
+Homepage:
+Navigation bar: #00695c
+
+Chat: info
+Chat Icon hover: #1565c0;	
+
+Start solution button: success
+
+
+Write_solution:
+Right Side bacground: #005A7F
+Left Side Background: #003E58
+Buttons: sucess 
+
+View others:
+Background: #005A7F	
+
+
+
+
